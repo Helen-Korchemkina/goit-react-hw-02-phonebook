@@ -12,6 +12,9 @@
   margin-right: 12px;
 }
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border-radius: 5px;
   height: 30px;
@@ -22,4 +25,8 @@
 .btn:focus {
   color: aliceblue;
   background-color: darkred;
+}
+
+.btn span {
+  margin-right: 5px;
 }

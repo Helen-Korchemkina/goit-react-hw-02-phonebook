@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FcTwoSmartphones } from "react-icons/fc";
 import PropTypes from 'prop-types';
 import s from './ContactForm.module.css';
 
@@ -30,7 +31,7 @@ class ContactForm extends Component {
   render() {
     return (
       <form className={s.submit} onSubmit={this.handleSubmit}>
-        <label className={s.label} htmlFor="">
+        <label className={s.label}>
           Name
           <input
             className={s.input}
@@ -43,7 +44,7 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <label className={s.label} htmlFor="">
+        <label className={s.label}>
           Number
           <input
             className={s.input}
@@ -61,7 +62,7 @@ class ContactForm extends Component {
           type="submit"
           disabled={!this.state.name && !this.state.number}
         >
-          Add contact
+          <span>Add contact</span> <FcTwoSmartphones/>
         </button>
       </form>
     );

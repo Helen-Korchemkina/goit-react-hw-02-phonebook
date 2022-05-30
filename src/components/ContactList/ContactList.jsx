@@ -1,4 +1,5 @@
 import React from 'react';
+import { FcFullTrash } from "react-icons/fc";
 import PropTypes from 'prop-types';
 import s from './ContactList.module.css';
 
@@ -13,7 +14,7 @@ const ContactList = ({ contacts, onDeleteContact }) => (
           type="button"
           onClick={() => onDeleteContact(id)}
         >
-          Delete
+          <span>Delete</span> <FcFullTrash/>
         </button>
       </li>
     ))}
@@ -21,7 +22,12 @@ const ContactList = ({ contacts, onDeleteContact }) => (
 );
 
 ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string.isRequired)),
+  contacts: PropTypes.arrayOf
+    (PropTypes.exact({
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    })),
   onDeleteContact: PropTypes.func.isRequired,
 };
 

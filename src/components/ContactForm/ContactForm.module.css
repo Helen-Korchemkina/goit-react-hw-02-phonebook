@@ -19,15 +19,20 @@
 }
 
 .btn {
-  margin-left: auto;
   cursor: pointer;
   border-radius: 5px;
   padding: 12px 24px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
 .btn:hover,
 .btn:focus {
   color: aliceblue;
   background-color: darkred;
+}
+
+.btn span {
+  margin-right: 5px;
 }
